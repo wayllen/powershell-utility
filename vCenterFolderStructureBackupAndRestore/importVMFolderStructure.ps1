@@ -41,7 +41,6 @@ Import-Csv "C:\vm-folder.csv" -UseCulture | %{
     }
     
     
-    Write-Host "The VM name is $vm."
         $vm = Get-VM -Name $_.Name -ErrorAction SilentlyContinue
         if($vm){
             Move-VM -VM $vm -Destination $location -Confirm:$false 
