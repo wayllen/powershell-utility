@@ -22,7 +22,7 @@ $vspherePass = Get-Content C:\userInfo\password.txt
 Connect-VIServer -Server $vsphereServer -Protocol https -User $vsphereUser -Password $vspherePass 
 Write-Host "Connect to vCenter..."
 
-#$newDatacenter = "new dc name" 
+$newDatacenter = "new dc name" 
 
 
 Import-Csv "C:\vm-folder.csv" -UseCulture | %{
